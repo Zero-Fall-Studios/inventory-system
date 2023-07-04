@@ -1,0 +1,16 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://bkbeh7sgw1fur"]
+
+[ext_resource type="Texture2D" uid="uid://btq0qskx883jt" path="res://assets/FunWoodSet.png" id="1_nhc8j"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8dp5n"]
+texture = ExtResource("1_nhc8j")
+texture_margin_left = 15.7999
+texture_margin_top = 16.3265
+texture_margin_right = 16.3265
+texture_margin_bottom = 16.0632
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+region_rect = Rect2(0, 0, 48, 48)
+
+[resource]
+Panel/styles/panel = SubResource("StyleBoxTexture_8dp5n")

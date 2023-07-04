@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://ck5ebho5eojei"]
+
+[ext_resource type="Texture2D" uid="uid://cyubp5bn3ohhx" path="res://assets/InventorySlot.png" id="1_8jk5i"]
+[ext_resource type="Script" path="res://scenes/slot.gd" id="2_0dlgr"]
+[ext_resource type="Shader" path="res://scenes/slot_graphic.gdshader" id="3_qnu16"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_66a8i"]
+shader = ExtResource("3_qnu16")
+shader_parameter/color = Color(1, 1, 1, 0.478431)
+
+[node name="Slot" type="TextureRect" groups=["slot"]]
+texture = ExtResource("1_8jk5i")
+script = ExtResource("2_0dlgr")
+slot_texture = ExtResource("1_8jk5i")
+
+[node name="SlotGraphic" type="TextureRect" parent="."]
+material = SubResource("ShaderMaterial_66a8i")
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+stretch_mode = 2

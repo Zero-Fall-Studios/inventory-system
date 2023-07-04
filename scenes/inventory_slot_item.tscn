@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bmn02rbo6gvmt"]
+
+[ext_resource type="Script" path="res://scenes/inventory_slot_item.gd" id="1_eonoo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1f0vd"]
+size = Vector2(16, 16)
+
+[node name="InventorySlotItem" type="Area2D"]
+script = ExtResource("1_eonoo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_1f0vd")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]

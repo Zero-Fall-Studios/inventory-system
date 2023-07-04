@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://bqvc0nbfuimcy"]
+
+[ext_resource type="PackedScene" uid="uid://4vlkcqgbej6n" path="res://scenes/inventory_ui.tscn" id="1_m1wwn"]
+[ext_resource type="PackedScene" uid="uid://bacc0kqeepab1" path="res://scenes/pickup.tscn" id="2_5va01"]
+[ext_resource type="Resource" uid="uid://bfpslitqdhgyg" path="res://examples/helmet.tres" id="4_f2g2n"]
+
+[node name="Main" type="Node2D"]
+
+[node name="InventoryUI" parent="." instance=ExtResource("1_m1wwn")]
+
+[node name="Pickup" parent="." instance=ExtResource("2_5va01")]
+visible = true
+position = Vector2(18, 21)
+item = Array[Resource("res://scripts/item.gd")]([ExtResource("4_f2g2n")])
+autospawn = true
+respawn_time = 1.0

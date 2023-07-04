@@ -1,0 +1,192 @@
+[gd_scene load_steps=17 format=3 uid="uid://4vlkcqgbej6n"]
+
+[ext_resource type="Script" path="res://scenes/inventory_ui.gd" id="1_ed3fo"]
+[ext_resource type="Resource" uid="uid://dcquhdht4d0op" path="res://examples/inventory.tres" id="2_c62q7"]
+[ext_resource type="Theme" uid="uid://bkbeh7sgw1fur" path="res://themes/default_theme.tres" id="3_bbd1p"]
+[ext_resource type="Texture2D" uid="uid://cyubp5bn3ohhx" path="res://assets/InventorySlot.png" id="3_e3vc6"]
+[ext_resource type="PackedScene" uid="uid://ck5ebho5eojei" path="res://scenes/slot.tscn" id="4_m8wfv"]
+[ext_resource type="Texture2D" uid="uid://dumxm3367q6bh" path="res://assets/WeaponsAndArmor.png" id="6_bja7v"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_actqb"]
+atlas = ExtResource("6_bja7v")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l0j0r"]
+atlas = ExtResource("6_bja7v")
+region = Rect2(16, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cclmm"]
+atlas = ExtResource("6_bja7v")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3mi28"]
+atlas = ExtResource("6_bja7v")
+region = Rect2(80, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r77v6"]
+atlas = ExtResource("6_bja7v")
+region = Rect2(32, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rgeld"]
+atlas = ExtResource("6_bja7v")
+region = Rect2(48, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n6o5f"]
+atlas = ExtResource("6_bja7v")
+region = Rect2(64, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4rc38"]
+atlas = ExtResource("6_bja7v")
+region = Rect2(80, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lv2kl"]
+atlas = ExtResource("6_bja7v")
+region = Rect2(96, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sh30b"]
+atlas = ExtResource("6_bja7v")
+region = Rect2(112, 32, 16, 16)
+
+[node name="InventoryUI" type="CanvasLayer"]
+layer = -100
+script = ExtResource("1_ed3fo")
+inventory = ExtResource("2_c62q7")
+slot_texture = ExtResource("3_e3vc6")
+slot = ExtResource("4_m8wfv")
+grid = Vector2(3, 5)
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -125.0
+offset_top = -70.0
+offset_right = 125.0
+offset_bottom = 70.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme = ExtResource("3_bbd1p")
+
+[node name="InventorySlots" type="Control" parent="Panel"]
+layout_mode = 2
+anchors_preset = 0
+offset_left = 33.0
+offset_top = 45.0
+offset_right = 33.0
+offset_bottom = 45.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/InventorySlots"]
+layout_mode = 2
+offset_right = 96.0
+offset_bottom = 56.0
+
+[node name="Equipment" type="Control" parent="Panel"]
+layout_mode = 2
+anchors_preset = 0
+offset_left = 117.0
+offset_top = 71.0
+offset_right = 117.0
+offset_bottom = 71.0
+size_flags_horizontal = 0
+size_flags_vertical = 4
+
+[node name="HeadSlot" parent="Panel/Equipment" instance=ExtResource("4_m8wfv")]
+layout_mode = 2
+offset_left = 56.0
+offset_top = -49.0
+offset_right = 72.0
+offset_bottom = -33.0
+slot_graphic_texture = SubResource("AtlasTexture_actqb")
+
+[node name="NeckSlot" parent="Panel/Equipment" instance=ExtResource("4_m8wfv")]
+layout_mode = 2
+offset_left = 76.0
+offset_top = -49.0
+offset_right = 92.0
+offset_bottom = -33.0
+slot_type = 1
+slot_graphic_texture = SubResource("AtlasTexture_l0j0r")
+
+[node name="WeaponLeft" parent="Panel/Equipment" instance=ExtResource("4_m8wfv")]
+layout_mode = 2
+offset_left = 36.0
+offset_top = -29.0
+offset_right = 52.0
+offset_bottom = -13.0
+slot_type = 9
+slot_graphic_texture = SubResource("AtlasTexture_cclmm")
+
+[node name="WeaponRight" parent="Panel/Equipment" instance=ExtResource("4_m8wfv")]
+layout_mode = 2
+offset_left = 76.0
+offset_top = -29.0
+offset_right = 92.0
+offset_bottom = -13.0
+slot_type = 10
+slot_graphic_texture = SubResource("AtlasTexture_3mi28")
+
+[node name="ChestSlot" parent="Panel/Equipment" instance=ExtResource("4_m8wfv")]
+layout_mode = 2
+offset_left = 56.0
+offset_top = -29.0
+offset_right = 72.0
+offset_bottom = -13.0
+slot_type = 2
+slot_graphic_texture = SubResource("AtlasTexture_r77v6")
+
+[node name="WaistSlot" parent="Panel/Equipment" instance=ExtResource("4_m8wfv")]
+layout_mode = 2
+offset_left = 56.0
+offset_top = -8.0
+offset_right = 72.0
+offset_bottom = 8.0
+slot_type = 3
+slot_graphic_texture = SubResource("AtlasTexture_rgeld")
+
+[node name="LegsSlot" parent="Panel/Equipment" instance=ExtResource("4_m8wfv")]
+layout_mode = 2
+offset_left = 56.0
+offset_top = 12.0
+offset_right = 72.0
+offset_bottom = 28.0
+slot_type = 4
+slot_graphic_texture = SubResource("AtlasTexture_n6o5f")
+
+[node name="BootsSlot" parent="Panel/Equipment" instance=ExtResource("4_m8wfv")]
+layout_mode = 2
+offset_left = 56.0
+offset_top = 31.0
+offset_right = 72.0
+offset_bottom = 47.0
+slot_type = 5
+slot_graphic_texture = SubResource("AtlasTexture_4rc38")
+
+[node name="HandsSlot" parent="Panel/Equipment" instance=ExtResource("4_m8wfv")]
+layout_mode = 2
+offset_left = 76.0
+offset_top = -8.0
+offset_right = 92.0
+offset_bottom = 8.0
+slot_type = 6
+slot_graphic_texture = SubResource("AtlasTexture_lv2kl")
+
+[node name="FingerLeftSlot" parent="Panel/Equipment" instance=ExtResource("4_m8wfv")]
+layout_mode = 2
+offset_left = 36.0
+offset_top = 12.0
+offset_right = 52.0
+offset_bottom = 28.0
+slot_type = 7
+slot_graphic_texture = SubResource("AtlasTexture_sh30b")
+
+[node name="FingerRightSlot" parent="Panel/Equipment" instance=ExtResource("4_m8wfv")]
+layout_mode = 2
+offset_left = 76.0
+offset_top = 12.0
+offset_right = 92.0
+offset_bottom = 28.0
+slot_type = 8
+slot_graphic_texture = SubResource("AtlasTexture_sh30b")

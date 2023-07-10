@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bmn02rbo6gvmt"]
 
-[ext_resource type="Script" path="res://scenes/inventory_slot_item.gd" id="1_eonoo"]
+[ext_resource type="Script" path="res://ui/inventory_slot_item.gd" id="1_eonoo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1f0vd"]
 size = Vector2(16, 16)

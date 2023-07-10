@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Armor" load_steps=2 format=3 uid="uid://b811vefwwgqfq"]
+
+[ext_resource type="Script" path="res://resources/armor.gd" id="1_08lfs"]
+
+[resource]
+script = ExtResource("1_08lfs")
+defense = 0.0
+weight = 0.0
+equip_on_pickup = false
+equipment_type = 1
+is_unique = false
+is_stackable = false
+max_stackable_count = 50
+quantity = 1

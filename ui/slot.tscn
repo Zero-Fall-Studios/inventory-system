@@ -8,14 +8,27 @@
 shader = ExtResource("3_qnu16")
 shader_parameter/color = Color(1, 1, 1, 0.478431)
 
-[node name="Slot" type="TextureRect" groups=["slot"]]
-texture = ExtResource("1_8jk5i")
+[node name="Slot" type="Control" groups=["slot"]]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 script = ExtResource("2_0dlgr")
-slot_texture = ExtResource("1_8jk5i")
 
-[node name="SlotGraphic" type="TextureRect" parent="."]
+[node name="Placeholder" type="TextureRect" parent="."]
 material = SubResource("ShaderMaterial_66a8i")
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 stretch_mode = 2
+
+[node name="Item" type="TextureRect" parent="."]
+material = SubResource("ShaderMaterial_66a8i")
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+stretch_mode = 2
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 0
+texture = ExtResource("1_8jk5i")

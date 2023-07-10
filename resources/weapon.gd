@@ -1,28 +1,5 @@
-extends Resource
-class_name Item
-
-@export var inventory_sprite: Texture
-@export var game_sprite: Texture
-
-@export_group("General")
-@export var is_unique: bool = false
-
-@export_group("Equipable")
-@export var equip_on_pickup: bool = false
-
-@export_group("Consumable")
-@export var consume_on_pickup: bool = false
-
-@export_group("Stackable")
-@export var is_stackable: bool = false
-@export var max_stackable_count: int = 50
-@export var quantity: int = 1
-
-enum ArmorType { None, Head, Neck, Chest, Waist, Legs, Feet, Hand, Finger }
-
-@export_group("Armor")
-@export var is_armor: bool = false
-@export var armor_type : ArmorType = ArmorType.None
+extends Equipable
+class_name Weapon
 
 enum WeaponState { 
 	Idle, 
@@ -32,8 +9,6 @@ enum WeaponState {
 	FireStarted, IsFiring, FireEnded
 }
 
-@export_group("Weapon")
-@export var is_weapon: bool = false
 @export var weapon_state : WeaponState = WeaponState.Idle
 @export var fire_rate: float = 0
 
@@ -65,7 +40,4 @@ func equip():
 	pass
 	
 func unequip():
-	pass
-	
-func consume():
 	pass

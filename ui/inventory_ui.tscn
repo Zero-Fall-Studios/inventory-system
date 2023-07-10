@@ -1,11 +1,7 @@
 [gd_scene load_steps=17 format=3 uid="uid://4vlkcqgbej6n"]
 
-[ext_resource type="Script" path="res://scenes/inventory_ui.gd" id="1_ed3fo"]
-[ext_resource type="Resource" uid="uid://dcquhdht4d0op" path="res://examples/inventory.tres" id="2_c62q7"]
-[ext_resource type="Theme" uid="uid://bkbeh7sgw1fur" path="res://themes/default_theme.tres" id="3_bbd1p"]
-[ext_resource type="Texture2D" uid="uid://cyubp5bn3ohhx" path="res://assets/InventorySlot.png" id="3_e3vc6"]
-[ext_resource type="PackedScene" uid="uid://ck5ebho5eojei" path="res://scenes/slot.tscn" id="4_m8wfv"]
-[ext_resource type="Texture2D" uid="uid://dumxm3367q6bh" path="res://assets/WeaponsAndArmor.png" id="6_bja7v"]
+[ext_resource type="Script" path="res://ui/inventory_ui.gd" id="1_ed3fo"]
+
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_actqb"]
 atlas = ExtResource("6_bja7v")

@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://b04ii0ud80tpv"]
+
+[ext_resource type="Script" path="res://ui/equipment_slot.gd" id="1_274wy"]
+[ext_resource type="Shader" path="res://ui/slot_graphic.gdshader" id="2_y14bk"]
+[ext_resource type="Texture2D" uid="uid://cyubp5bn3ohhx" path="res://assets/InventorySlot.png" id="3_ocsmx"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_66a8i"]
+shader = ExtResource("2_y14bk")
+shader_parameter/color = Color(1, 1, 1, 0.478431)
+
+[node name="EquipmentSlot" type="Control" groups=["slot"]]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_274wy")
+equipment_slot_type = 1
+
+[node name="Placeholder" type="TextureRect" parent="."]
+material = SubResource("ShaderMaterial_66a8i")
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+stretch_mode = 2
+
+[node name="Item" type="TextureRect" parent="."]
+material = SubResource("ShaderMaterial_66a8i")
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+stretch_mode = 2
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 0
+texture = ExtResource("3_ocsmx")

@@ -1,6 +1,6 @@
 [gd_resource type="Theme" load_steps=3 format=3 uid="uid://bkbeh7sgw1fur"]
 
-[ext_resource type="Texture2D" uid="uid://btq0qskx883jt" path="res://assets/FunWoodSet.png" id="1_nhc8j"]
+[ext_resource type="Texture2D" uid="uid://btq0qskx883jt" path="res://assets/images/FunWoodSet.png" id="1_nhc8j"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8dp5n"]
 texture = ExtResource("1_nhc8j")
@@ -13,4 +13,5 @@ axis_stretch_vertical = 1
 region_rect = Rect2(0, 0, 48, 48)
 
 [resource]
+HBoxContainer/constants/separation = 25
 Panel/styles/panel = SubResource("StyleBoxTexture_8dp5n")
